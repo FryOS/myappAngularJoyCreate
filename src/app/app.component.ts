@@ -14,21 +14,24 @@ export class AppComponent {
       new Article(
         'Angular 2',
         'http://angular.io',
+        2
+      ),
+      new Article(
+        'Google',
+        'http://google.com',
         10
       ),
       new Article(
-        'Angular 2',
-        'http://angular.io',
-        10
-      ),
-      new Article(
-        'Angular 2',
-        'http://angular.io',
-        10
+        'Yandex',
+        'http://yandex.ru',
+        8
       )
     ]
   }
 
+  sortedArticles(): Article[] {
+    return this.articles.sort((a: Article, b: Article) => b.votes - a.votes)
+  }
 
   addArticle(title: HTMLInputElement, link: HTMLInputElement) :boolean {
     console.log(`${title.value} ${link.value}`);

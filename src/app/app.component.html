@@ -18,7 +18,7 @@
       </div>
       <div>
         <app-article
-        *ngFor="let item of articles"
+        *ngFor="let item of sortedArticles()"
         [article] = 'item'
         ></app-article>
       </div>

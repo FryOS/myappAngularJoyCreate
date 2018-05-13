@@ -22,8 +22,8 @@ export class Article {
 
   domain(): string {
     try {
-     const domaininAndPath: string = this.link.split('//')[1];
-     return domaininAndPath.split('/')[0];
+     const domainAndPath: string = this.link.split('//')[1];
+     return domainAndPath.split('/')[0];
     } catch(err){
       return null;
     }
