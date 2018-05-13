@@ -1,3 +1,30 @@
-<p>
-  article works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="card" style="width: 5rem;">
+        <div class="card-body">
+          <div class="card-title">{{ article.votes }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="div">
+        <a href="{{ article.link }}">
+          {{ article.title }}
+        </a>
+      </div>
+      <ul class="list-inline">
+        <li class="list-inline-item">
+          <a href (click)="voteUp()">
+            <i >voteUp</i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a href (click)="voteDown()">
+            <i >voteDown</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

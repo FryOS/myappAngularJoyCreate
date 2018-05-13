@@ -13,11 +13,18 @@
             <input class="form-control" name="link" #link>
           </div>
         </div>
-
       <div class="form-group">
         <button type="button" class="btn btn-primary" (click)="addArticle(title, link)">Add</button>
       </div>
+      <div>
+        <app-article
+        *ngFor="let item of articles"
+        [article] = 'item'
+        ></app-article>
+      </div>
+
     </form>
     </div>
+
   </div>
 </div>
